@@ -38,7 +38,7 @@ git clone https://github.com/StylianosNikopoulos/MyAppleShop.git
 ![image](https://github.com/user-attachments/assets/08b866c6-ed73-48d1-a8cd-2f76df771448)
 
 
-![image](https://github.com/user-attachments/assets/3d99fb4a-5dc4-4186-b551-1931528adb6d)
+![image](https://github.com/user-attachments/assets/dcbdecc0-c501-49d6-bd4b-41ddb3e47beb)
 
 
 ![image](https://github.com/user-attachments/assets/ae3fb15c-28a8-492b-a740-87b04b66e034)
