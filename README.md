@@ -30,3 +30,23 @@ Both the user-facing MVC application and the admin API are included in the same 
 ```bash
 git clone https://github.com/StylianosNikopoulos/MyAppleShop.git
 cd MyAppleShop
+![image](https://github.com/user-attachments/assets/1f96a422-dca9-4662-9582-ba8a72167a28)
+
+
+![image](https://github.com/user-attachments/assets/bc012485-4ce0-47e0-a4fb-e007525e33d7)
+
+
+![image](https://github.com/user-attachments/assets/ebfea6c3-099d-4492-bbec-b84af73f0314)
+
+
+![image](https://github.com/user-attachments/assets/3d99fb4a-5dc4-4186-b551-1931528adb6d)
+
+
+![image](https://github.com/user-attachments/assets/a2d28283-5182-477f-b826-bed7e7786273)
+
+
+![image](https://github.com/user-attachments/assets/c25510a6-3181-4752-8c95-32b91d3d6df2)
+
+
+![image](https://github.com/user-attachments/assets/67d54ce2-0d2e-4071-a355-9ae56b649c02)
+
