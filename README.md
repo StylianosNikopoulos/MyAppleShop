@@ -37,7 +37,7 @@ cd MyAppleShop
 ![image](https://github.com/user-attachments/assets/bc012485-4ce0-47e0-a4fb-e007525e33d7)
 
 
-![image](https://github.com/user-attachments/assets/ebfea6c3-099d-4492-bbec-b84af73f0314)
+![image](https://github.com/user-attachments/assets/08b866c6-ed73-48d1-a8cd-2f76df771448)
 
 
 ![image](https://github.com/user-attachments/assets/3d99fb4a-5dc4-4186-b551-1931528adb6d)
