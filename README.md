@@ -16,8 +16,7 @@ Administrators have access to a dedicated API, `MyAppleShopApi`, where they can:
 - **Update**: Modify existing products.
 - **Delete**: Remove products from the inventory.
 
-Both the user-facing MVC application and the admin API are included in the same repository and are fully integrated.
-
+Both the user-facing MVC application and the admin API are fully integrated with each other.
 
 ### Prerequisites
 
@@ -28,7 +27,6 @@ Both the user-facing MVC application and the admin API are included in the same 
 ### Clone the Repository
 
 git clone https://github.com/StylianosNikopoulos/MyAppleShop.git
-cd MyAppleShop
 
 
 ![image](https://github.com/user-attachments/assets/32b1f490-c42b-4d78-8129-eefba9eda16a)
