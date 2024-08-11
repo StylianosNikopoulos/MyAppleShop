@@ -1,0 +1,183 @@
+﻿@model MyAppleShop.Models.ProductViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/MyAppleShop.styles.css" asp-append-version="true" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
+
+
+    <br />
+    <br />
+    <br />
+
+    <section id="billboard" class="position-relative overflow-hidden bg-light-blue">
+        <div class="swiper main-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <div class="banner-content">
+                                    <h1 class="display-2 text-uppercase text-dark">Great Products.</h1>
+                                    <a href="#mobile-products" class="btn btn-dark btn-rounded text-uppercase">See Our Products</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 d-none d-md-block">
+                                <div class="image-holder">
+                                    <img src="images/banner-image.png" alt="banner">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br />
+    <section id="company-services" class="padding-large">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 pb-3">
+                    <div class="icon-box d-flex">
+                        <div class="icon-box-icon pe-3 pb-3">
+                        </div>
+                        <div class="icon-box-content">
+                            <h3 class="card-title text-uppercase text-dark">Free delivery</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 pb-3">
+                    <div class="icon-box d-flex">
+                        <div class="icon-box-icon pe-3 pb-3">
+                        </div>
+                        <div class="icon-box-content">
+                            <h3 class="card-title text-uppercase text-dark">Quality guarantee</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 pb-3">
+                    <div class="icon-box d-flex">
+                        <div class="icon-box-icon pe-3 pb-3">
+                        </div>
+                        <div class="icon-box-content">
+                            <h3 class="card-title text-uppercase text-dark">Daily offers</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 pb-3">
+                    <div class="icon-box d-flex">
+                        <div class="icon-box-icon pe-3 pb-3">
+                        </div>
+                        <div class="icon-box-content">
+                            <h3 class="card-title text-uppercase text-dark">100% secure payment</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr />
+    <section id="mobile-products" class="product-store position-relative padding-large no-padding-top">
+        <div class="container">
+            <h2>Iphones</h2>
+            <div class="row">
+                @foreach (var item in Model.Products)
+                {
+                    <div class="col-3">
+                        <div class="item">
+                            <form class="d-flex justify-content-center" style="position:relative" asp-action="CreateCheckout" method="post">
+                                <input type="hidden" name="Id" value="@item.Id" />
+                                <img class="itemImg" name="ImageUrl" src="@item.ImageUrl" style="width:70%;" />
+                                <h6 name="Name" style="position:absolute; top:40%;">@item.Name</h6>
+                                <div class="price">$@item.Price</div>
+                                <input type="hidden" name="Price" value="@item.Price" />
+                                <input class="btn btn-dark" type="submit" value="Checkout" style="position: absolute; top:60%;">
+                            </form>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+
+    </section>
+    <br />
+    <br />
+    <br />
+    <hr />
+    <section id="smart-watches" class="product-store position-relative padding-large no-padding-top">
+        <div class="container">
+            <h2>AppleWatches</h2>
+            <div class="row">
+                @foreach (var item in Model.Watches)
+                {
+                    <div class="col-3">
+                        <div class="item">
+                            <form class="d-flex justify-content-center" style="position:relative" asp-action="CreateWatchCheckout" method="post">
+                                <input type="hidden" name="Id" value="@item.Id" />
+                                <img class="itemImg" name="ImageUrl" src="@item.ImageUrl" style="width:70%;" />
+                                <h6 name="Name" style="position:absolute; top:40%;">@item.Name</h6>
+                                <div class="price">$@item.Price</div>
+                                <input type="hidden" name="Price" value="@item.Price" />
+                                <input class="btn btn-dark" type="submit" value="Checkout" style="position: absolute; top:60%;">
+                            </form>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+
+    </section>
+    <br />
+    <br />
+    <br />
+    <hr />
+    <footer>
+        <div id="footer-bottom">
+            <div class="container">
+                <div class="row d-flex flex-wrap justify-content-between">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="Shipping d-flex">
+                            <p>We ship with:</p>
+                            <div class="card-wrap ps-2">
+                                <img src="images/dhl.png" alt="visa">
+                                <img src="images/shippingcard.png" alt="mastercard">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="payment-method d-flex">
+                            <p>Payment options:</p>
+                            <div class="card-wrap ps-2">
+                                <img src="images/visa.jpg" alt="visa">
+                                <img src="images/mastercard.jpg" alt="mastercard">
+                                <img src="images/paypal.jpg" alt="paypal">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="copyright">
+                            <p>
+                                © Copyright 2023 MyAppleShop.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/plugins.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
