@@ -28,5 +28,5 @@ Both the user-facing MVC application and the admin API are included in the same 
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/MyAppleShop.git
+git clone https://github.com/StylianosNikopoulos/MyAppleShop.git
 cd MyAppleShop
