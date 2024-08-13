@@ -96,6 +96,7 @@
                         <div class="item">
                             <form class="d-flex justify-content-center" style="position:relative" asp-action="CreateCheckout" method="post">
                                 <input type="hidden" name="Id" value="@item.Id" />
+                                <input type="hidden" name="PriceId" value="@item.PriceId" />
                                 <img class="itemImg" name="ImageUrl" src="@item.ImageUrl" style="width:70%;" />
                                 <h6 name="Name" style="position:absolute; top:40%;">@item.Name</h6>
                                 <div class="price">$@item.Price</div>
@@ -107,6 +108,7 @@
                 }
             </div>
         </div>
+
 
     </section>
     <br />
@@ -123,6 +125,7 @@
                         <div class="item">
                             <form class="d-flex justify-content-center" style="position:relative" asp-action="CreateWatchCheckout" method="post">
                                 <input type="hidden" name="Id" value="@item.Id" />
+                                <input type="hidden" name="PriceId" value="@item.PriceId" />
                                 <img class="itemImg" name="ImageUrl" src="@item.ImageUrl" style="width:70%;" />
                                 <h6 name="Name" style="position:absolute; top:40%;">@item.Name</h6>
                                 <div class="price">$@item.Price</div>
@@ -133,6 +136,7 @@
                     </div>
                 }
             </div>
+
         </div>
 
     </section>
@@ -166,7 +170,7 @@
                     <div class="col-md-4 col-sm-6">
                         <div class="copyright">
                             <p>
-                                © Copyright 2023 MyAppleShop.
+                                © Copyright 2024 MyAppleShop.
                             </p>
                         </div>
                     </div>

@@ -40,6 +40,7 @@ namespace MyAppleShop.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateCheckout([Bind("Id,Name,ImageUrl,PriceId")] Product product)
         {
+
             var domain = "https://localhost:7119";
             var options = new SessionCreateOptions
             {
@@ -47,8 +48,8 @@ namespace MyAppleShop.Controllers
                 {
                     new SessionLineItemOptions
                     {
-                        //Price = product.PriceId,
-                        Price = "price_1Pls2DBlT4Q7uMDZij67DKyD", 
+                        Price = product.PriceId,
+                        //Price = "price_1Pls2DBlT4Q7uMDZij67DKyD", 
                         Quantity = 1,
                     },
                 },
@@ -80,15 +81,20 @@ namespace MyAppleShop.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateWatchCheckout([Bind("Id,Name,ImageUrl,PriceId")] Watch watch)
         {
+            Console.WriteLine($"Product PriceId: {watch.PriceId}");
+
             var domain = "https://localhost:7119";
             var options = new SessionCreateOptions
+
             {
                 LineItems = new List<SessionLineItemOptions>
                 {
+
                     new SessionLineItemOptions
                     {
-                        //Price = watch.PriceId,
-                        Price ="price_1Pm9XdBlT4Q7uMDZ5Acg63Ve",
+
+                        Price = watch.PriceId,
+                        //Price ="price_1Pm9XdBlT4Q7uMDZ5Acg63Ve",
                         Quantity = 1,
                     },
                 },
